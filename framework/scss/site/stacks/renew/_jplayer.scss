@@ -1,0 +1,231 @@
+// =============================================================================
+// SCSS/SITE/STACKS/RENEW/_JPLAYER.SCSS
+// -----------------------------------------------------------------------------
+// Styles for jPlayer.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+//   01. jPlayer Media Container
+//       a. All
+//       b. Audio
+//       c. Video
+//   02. jPlayer Controls Container
+//       a. Play/pause
+//       b. Mute/unmute
+//       c. Full screen/restore screen
+//       d. Repeat/repeat off
+//   03. jPlayer Controls
+//   04. jPlayer Progress Bar
+//   05. jPlayer Volume Bar
+// =============================================================================
+
+// jPlayer Media Container
+// =============================================================================
+
+//
+// All.
+//
+
+.jp-jplayer { 
+  position: absolute;
+}
+
+
+//
+// Audio.
+//
+
+.jp-jplayer-audio {  }
+
+
+//
+// Video.
+//
+
+.jp-jplayer-video {
+  background-color: $black;
+}
+
+
+
+// jPlayer Controls Container
+// =============================================================================
+
+.jp-controls-container {  }
+
+.jp-controls-container-audio {  }
+
+.jp-controls-container-video {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+
+.jp-interface {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.065);
+  height: $jPlayerHeight;
+  background-color: $baseModBackground;
+  background-color: rgba(0, 0, 0, 0.065);
+}
+
+
+
+// jPlayer Controls
+// =============================================================================
+
+.jp-controls {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    display: block;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 30px;
+    height: $jPlayerHeight - 2;
+    outline: none;
+    line-height: $jPlayerHeight - 2;
+    text-align: center;
+    z-index: 1;
+
+    span {
+      visibility: hidden;
+    }
+
+    &:before {
+      display: block;
+      margin: 0 auto;
+      font-family: "fontawesome";
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      color: darken($white, 15%);
+      speak: none;
+    }
+
+    &:hover:before {
+      color: darken($white, 15%);
+    }
+  }
+}
+
+
+//
+// Play/pause.
+//
+
+a.jp-play,
+a.jp-pause {
+  left: 0;
+}
+
+a.jp-play {
+  &:before {
+    content: "\f04b";
+  }
+}
+
+a.jp-pause {
+  &:before {
+    content: "\f04c";
+  }
+}
+
+
+//
+// Mute/unmute.
+//
+
+// a.jp-mute,
+// a.jp-unmute {
+//   right: 64px;
+// }
+
+// a.jp-mute {
+//   &:before {
+//     content: "\f028";
+//   }
+// }
+
+// a.jp-unmute {
+//   &:before {
+//     content: "\f026";
+//   }
+// }
+
+
+
+// jPlayer Progress Bar
+// =============================================================================
+
+.jp-progress-container {
+  position: absolute;
+  top: ($jPlayerHeight - 12) / 2;
+  left: 30px;
+  right: 12px;
+  height: 10px;
+}
+
+.jp-progress { 
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: $black;
+}
+
+.jp-seek-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  cursor: pointer;
+  background-color: darken($white, 15%);
+}
+
+.jp-play-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background-color: $white;
+}
+
+
+
+// jPlayer Volume Bar
+// =============================================================================
+
+// .jp-volume-bar-container {
+//   position: absolute;
+//   top: ($jPlayerHeight - 12) / 2;
+//   right: 10px;
+//   width: 52px;
+//   height: 10px;
+// }
+
+// .jp-volume-bar {
+//   position: relative;
+//   cursor: pointer;
+//   top: 0;
+//   height: 10px;
+//   background-color: $black;
+//   border-radius: 3px;
+// }
+
+// .jp-volume-bar-value {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 0;
+//   height: 10px;
+//   background-color: $white;
+//   border-radius: 2px;
+// }

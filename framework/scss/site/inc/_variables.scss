@@ -1,0 +1,89 @@
+// =============================================================================
+// SCSS/SITE/INC/_VARIABLES.SCSS
+// -----------------------------------------------------------------------------
+// SASS variables used throughout the project's .scss files. Should be imported
+// before the mixin files so that there are no errors when compiling. More
+// information on variables can be found here:
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+//   01. Spacing Helpers
+//   02. Colors
+//       a. Grayscale
+//       b. General Accent Colors
+//   03. Buttons
+//   04. Z-Index Master List
+//   05. Responsive Breakpoints
+// =============================================================================
+
+// Spacing Helpers
+// =============================================================================
+
+$spacingHelperNone:      0     !default;
+$spacingHelperSmall:     0.5em !default;
+$spacingHelperMedium:    1em   !default;
+$spacingHelperLarge:     2em   !default;
+
+
+
+// Colors
+// =============================================================================
+
+//
+// Grayscale.
+//
+
+$black:          #000 !default;
+$grayDarker:     #222 !default;
+$grayDark:       #333 !default;
+$gray:           #555 !default;
+$grayLight:      #999 !default;
+$grayLighter:    #eee !default;
+$white:          #fff !default;
+
+
+//
+// General Accent Colors.
+//
+
+$blue:        #049cdb !default;
+$blueDark:    #0064cd !default;
+$green:       #46a546 !default;
+$red:         #9d261d !default;
+$yellow:      #ffc40d !default;
+$orange:      #f89406 !default;
+$pink:        #c3325f !default;
+$purple:      #7a43b6 !default;
+
+
+
+// Buttons
+// =============================================================================
+
+$btnBackground:    #ff2a13                     !default;
+$btnBorder:        darken($btnBackground, 20%) !default;
+
+
+
+// Z-Index Master List
+// =============================================================================
+
+$zindexDropdown:         1000 !default;
+$zindexPopover:          1010 !default;
+$zindexTooltip:          1020 !default;
+$zindexNavbar:           1030 !default;
+$zindexModalBackdrop:    1040 !default;
+$zindexModal:            1050 !default;
+
+
+
+// Responsive Breakpoints
+// =============================================================================
+
+$breakSmall:          480px  !default;
+$breakMedium:         767px  !default;
+$breakMediumLarge:    979px  !default; // (+1 = default desktop)
+$breakLarge:          1200px !default;

@@ -1,0 +1,28 @@
+// =============================================================================
+// SCSS/CONTENT-DOCK-INTEGRITY-LIGHT.SCSS
+// -----------------------------------------------------------------------------
+// Contains all Content Dock styles for the Integrity Stack (light version).
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+//   01. Functions, Variables, and Mixins
+//   02. Content Dock
+// =============================================================================
+
+// Functions, Variables, and Mixins
+// =============================================================================
+
+@import "site/inc/functions";
+@import "site/inc/variables";
+@import "site/stacks/integrity/inc/variables-light";
+@import "site/inc/mixins";
+@import "site/stacks/integrity/inc/mixins";
+
+
+
+// Content Dock
+// =============================================================================
+
+@import "site/stacks/integrity/content-dock";
