@@ -14,7 +14,7 @@ if ( $order ) : ?>
 
   <?php if ( in_array( $order->status, array( 'failed' ) ) ) : ?>
 
-    <p><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', '__x__' ); ?></p>
+    <p><?php _e( 'Ne pare rau, dar comanda nu a putut fi plasata deoarece banca dvs. a refuzat tranzactia.', '__x__' ); ?></p>
 
     <p><?php
       if ( is_user_logged_in() )
@@ -26,21 +26,21 @@ if ( $order ) : ?>
     <p>
       <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', '__x__' ) ?></a>
       <?php if ( is_user_logged_in() ) : ?>
-      <a href="<?php echo esc_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ); ?>" class="button pay"><?php _e( 'My Account', '__x__' ); ?></a>
+      <a href="<?php echo esc_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ); ?>" class="button pay"><?php _e( 'Contul meu', '__x__' ); ?></a>
       <?php endif; ?>
     </p>
 
   <?php else : ?>
 
-    <p><?php _e( 'Thank you. Your order has been received.', '__x__' ); ?></p>
+    <p><?php _e( 'Multumim! Comanda a fost facuta cu succes.', '__x__' ); ?></p>
 
     <ul class="order_details x-alert x-alert-info x-alert-block">
       <li class="order">
-        <?php _e( 'Order:', '__x__' ); ?>
+        <?php _e( 'Comanda:', '__x__' ); ?>
         <strong><?php echo $order->get_order_number(); ?></strong>
       </li>
       <li class="date">
-        <?php _e( 'Date:', '__x__' ); ?>
+        <?php _e( 'Data:', '__x__' ); ?>
         <strong><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?></strong>
       </li>
       <li class="total">
@@ -49,7 +49,7 @@ if ( $order ) : ?>
       </li>
       <?php if ( $order->payment_method_title ) : ?>
       <li class="method">
-        <?php _e( 'Payment method:', '__x__' ); ?>
+        <?php _e( 'Metoda de Plata:', '__x__' ); ?>
         <strong><?php echo $order->payment_method_title; ?></strong>
       </li>
       <?php endif; ?>
@@ -63,6 +63,6 @@ if ( $order ) : ?>
 
 <?php else : ?>
 
-  <p><?php _e( 'Thank you. Your order has been received.', '__x__' ); ?></p>
+  <p><?php _e( 'Multumim! Comanda a fost facuta cu succes.', '__x__' ); ?></p>
 
 <?php endif; ?>

@@ -18,13 +18,13 @@ if ( get_option( 'woocommerce_enable_shipping_calc' ) === 'no' || ! WC()->cart->
 
 <form class="shipping_calculator" action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
 
-  <h2><?php _e( 'Calculate Shipping', '__x__' ); ?></h2>
+  <h2><?php _e( 'Calculează livrarea', '__x__' ); ?></h2>
 
   <section class="shipping-calculator-fields">
 
     <p class="form-row form-row-wide">
       <select name="calc_shipping_country" id="calc_shipping_country" class="country_to_state" rel="calc_shipping_state">
-        <option value=""><?php _e( 'Select a country&hellip;', '__x__' ); ?></option>
+        <option value=""><?php _e( 'Selectează o ţară&hellip;', '__x__' ); ?></option>
         <?php
           foreach( WC()->countries->get_shipping_countries() as $key => $value )
             echo '<option value="' . esc_attr( $key ) . '"' . selected( WC()->customer->get_shipping_country(), esc_attr( $key ), false ) . '>' . esc_html( $value ) . '</option>';
@@ -77,7 +77,7 @@ if ( get_option( 'woocommerce_enable_shipping_calc' ) === 'no' || ! WC()->cart->
       </p>
     <?php endif; ?>
 
-    <p><button type="submit" name="calc_shipping" value="1" class="button"><?php _e( 'Update Totals', '__x__' ); ?></button></p>
+    <p><button type="submit" name="calc_shipping" value="1" class="button"><?php _e( 'Actualizează Totalul', '__x__' ); ?></button></p>
 
     <?php wp_nonce_field( 'woocommerce-cart' ); ?>
 

@@ -1,3 +1,23 @@
+#billing_postcode_field abbr {
+	display:none !important;
+	
+	}
+
+
+/*PRODUCT IMAGE POPUP TOP FIX*/
+
+div.pp_pic_holder {
+	
+	top:10px !important;
+	
+	}
+	
+/*cart tab top fix*/
+.cart-tab {
+	top:13em !important;
+	}
+
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -329,7 +349,7 @@ h6,
 ul,
 ol {
   padding: 0;
-  margin: 0 0 1.313em 1.655em; }
+  margin:none; }
 
 ul ul,
 ul ol,
@@ -939,7 +959,7 @@ a.x-img-thumbnail:hover {
   font-size: 12px;
   font-size: 1.2rem;
   list-style: none;
-  background-color: white;
+  background-color:rgb(39, 38, 38);
   z-index: 1000;
   border-radius: 4px;
   -webkit-background-clip: padding-box;
@@ -987,10 +1007,10 @@ a.x-img-thumbnail:hover {
 .x-navbar .sub-menu li > a:hover {
   text-decoration: none;
   color: #333333;
-  background-color: whitesmoke; }
+  background-color:#069; }
 
 .x-navbar .sub-menu .current-menu-item > a {
-  background-color: whitesmoke; }
+  background-color:rgb(26, 26, 26); }
 
 .sf-menu ul {
   position: absolute;
@@ -1011,7 +1031,7 @@ a.x-img-thumbnail:hover {
 
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-  top: 75px;
+  top: 75px !important;
   left: 0;
   z-index: 9999; }
 
@@ -1184,7 +1204,10 @@ a.x-img-thumbnail:hover {
   position: relative;
   overflow: visible;
   border-bottom: 1px solid #cccccc;
-  background-color: white;
+  background-color:#213a58;
+  background-image:url('https://ipsc.ro/store/wp-content/uploads/2014/07/background2.jpg');
+  background-repeat:no-repeat;
+  background-position: 50%;
   z-index: 1030;
   font-size: 14px;
   font-size: 1.4rem;

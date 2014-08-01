@@ -24,6 +24,7 @@ $one_page_nav      = ( $one_page_nav_meta == '' ) ? 'Deactivated' : $one_page_na
   <div class="x-navbar-wrap">
     <div class="<?php x_navbar_class(); ?>">
       <div class="x-navbar-inner x-container-fluid max width">
+      
         <?php x_get_view( 'global', '_nav', 'primary' ); ?>
       </div> <!-- end .x-navbar-inner -->
     </div> <!-- end .x-navbar -->

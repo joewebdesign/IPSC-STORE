@@ -14,4 +14,20 @@
 
 ?>
 
+<link rel="stylesheet" href="http://ipsc.ro/store/wp-content/uploads/2014/07/OrganicTabs/css/style.css">
+	
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+    <script src="http://ipsc.ro/store/wp-content/uploads/2014/07/OrganicTabs/js/organictabs.jquery.js"></script>
+    <script>
+        $(function() {
+    
+            $("#example-one").organicTabs();
+            
+            $("#example-two").organicTabs({
+                "speed": 200
+            });
+    
+        });
+    </script>
+
 <?php x_get_view( x_get_stack(), 'wp', 'header' ); ?>

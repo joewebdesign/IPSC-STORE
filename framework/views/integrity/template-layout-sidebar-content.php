@@ -19,8 +19,36 @@
 
     </div> <!-- end .x-main -->
 	<?php /*get_sidebar();*/ ?>
-    <?php dynamic_sidebar( 'main' ); ?>
-	<div class="x-sidebar "><?php dynamic_sidebar( 'main2' ); ?></div>
+   
+   
+   <div id="example-one">
+        			
+        	<ul class="nav">
+                <li class="nav-one"><a href="#featured" class="current">Categorii</a></li>
+                <li class="nav-two"><a href="#core">BRANDURI</a></li>
+                
+             
+            </ul>
+        	
+        	<div class="list-wrap">
+        	
+        		<ul id="featured">
+        			 <?php dynamic_sidebar( 'main' ); ?>
+        			
+        		</ul>
+        		 
+        		 <ul id="core" class="hide">
+                    
+        			<div class="x-sidebar "><?php dynamic_sidebar( 'main2' ); ?></div>
+        		 </ul>
+        		 
+        		 
+        		 
+        	 </div> <!-- END List Wrap -->
+         
+         </div>
+   
+ 
     
   </div> <!-- end .x-container-fluid.max.width.offset.cf -->
 

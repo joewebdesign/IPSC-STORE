@@ -12,6 +12,8 @@ $one_page_nav      = ( $one_page_nav_meta == '' ) ? 'Deactivated' : $one_page_na
 
 ?>
 
+
+
 <a href="#" class="x-btn-navbar collapsed" data-toggle="collapse" data-target=".x-nav-collapse">
   <i class="x-icon-bars"></i>
   <span class="visually-hidden"><?php _e( 'Navigation', '__x__' ); ?></span>

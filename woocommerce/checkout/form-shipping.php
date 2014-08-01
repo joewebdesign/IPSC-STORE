@@ -23,10 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
       }
     ?>
 
-    <h3 id="ship-to-different-address" class="ship-to-different-address">
+   <?php /*?> <h3 id="ship-to-different-address" class="ship-to-different-address">
       <input id="ship-to-different-address-checkbox" class="input-checkbox" <?php checked( $ship_to_different_address, 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
       <label for="ship-to-different-address-checkbox" class="checkbox"><?php _e( 'Ship to a different address?', '__x__' ); ?></label>
-    </h3>
+    </h3><?php */?>
 
     <div class="shipping_address">
       <?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>

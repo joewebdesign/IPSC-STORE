@@ -35,7 +35,7 @@ if ( $products->have_posts() && $enable == 1 ) : ?>
 
   <div class="related products cols-<?php echo $columns; ?>">
 
-    <h2><?php _e( 'Related Products', '__x__' ); ?></h2>
+    <h2><?php _e( 'Produse similare', '__x__' ); ?></h2>
 
     <?php woocommerce_product_loop_start(); ?>
       <?php while ( $products->have_posts() ) : $products->the_post(); ?>

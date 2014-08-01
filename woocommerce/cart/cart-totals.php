@@ -14,18 +14,18 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
   <?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-  <h2><?php _e( 'Cart Totals', '__x__' ); ?></h2>
+  <h2><?php _e( 'Total Coş', '__x__' ); ?></h2>
 
   <table cellspacing="0">
 
     <tr class="cart-subtotal">
-      <th><?php _e( 'Cart Subtotal', '__x__' ); ?></th>
+      <th><?php _e( 'Subtotal Coş', '__x__' ); ?></th>
       <td><?php wc_cart_totals_subtotal_html(); ?></td>
     </tr>
 
     <?php foreach ( WC()->cart->get_coupons( 'cart' ) as $code => $coupon ) : ?>
       <tr class="cart-discount coupon-<?php echo esc_attr( $code ); ?>">
-        <th><?php _e( 'Coupon:', '__x__' ); ?> <?php echo esc_html( $code ); ?></th>
+        <th><?php _e( 'Cupon:', '__x__' ); ?> <?php echo esc_html( $code ); ?></th>
         <td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
       </tr>
     <?php endforeach; ?>
@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
     <?php foreach ( WC()->cart->get_coupons( 'order' ) as $code => $coupon ) : ?>
       <tr class="order-discount coupon-<?php echo esc_attr( $code ); ?>">
-        <th><?php _e( 'Coupon:', '__x__' ); ?> <?php echo esc_html( $code ); ?></th>
+        <th><?php _e( 'Cupon:', '__x__' ); ?> <?php echo esc_html( $code ); ?></th>
         <td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
       </tr>
     <?php endforeach; ?>
@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     <?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
     <tr class="order-total">
-      <th><?php _e( 'Order Total', '__x__' ); ?></th>
+      <th><?php _e( 'Total Comandă', '__x__' ); ?></th>
       <td><?php wc_cart_totals_order_total_html(); ?></td>
     </tr>
 
