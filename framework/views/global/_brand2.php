@@ -20,20 +20,14 @@ endif;
 
 ?>
 
-<a href="<?php echo home_url( '/' ); ?>" class="<?php x_brand_class(); ?>" title="<?php echo $site_description; ?>">
+<a href="https://ipsc.ro/store/swarovski" class="<?php x_brand_class(); ?>" title="<?php echo $site_description; ?>">
 
   <?php
 
   if ( $logo == '' ) :
     echo $site_name;
   else :
-    
-	if (is_product() && has_term( 'swcat', 'product_cat' ) ) {
-	echo '<img src="https://www.ipsc.ro/store/wp-content/uploads/2014/07/swarovskilogo.jpg" alt="' . $site_description . '">'; }
-	else {
-	
-	echo '<img src="' . $logo . '" alt="' . $site_description . '">';
-	}
+    echo '<img src="https://www.ipsc.ro/store/wp-content/uploads/2014/07/swarovskilogo.jpg" alt="' . $site_description . '">';
   endif;
 
   ?>

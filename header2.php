@@ -29,31 +29,5 @@
     
         });
     </script>
-
-<?php x_get_view( x_get_stack(), 'wp', 'header' ); 
-
-
-if (is_product() && has_term( 'swcat', 'product_cat' ) ) {
-	
-		?>
-    
-    <style>
-	.x-navbar {
-background-image: url('https://ipsc.ro/store/wp-content/uploads/2014/07/background3.jpg') !important;
-}
-
-body {
-background: #f3f3f3 url(https://www.ipsc.ro/store/wp-content/uploads/2014/07/bgrswarovskioptik.jpg) center top no-repeat;
-}
-
-.x-brand img {
-width: 140px !important;
-}
-</style>
-   <?php 
- }   
-    
-	
-
-
-?>
+testh2
+<?php x_get_view( x_get_stack(), 'wp', 'header2' ); ?>

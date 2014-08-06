@@ -19,8 +19,22 @@ global $post, $product, $ValUnEuro, $PretFaraTVA, $PretEuro, $PretFaraTVA_Membru
    <?php /*?><span class="amount"> Pret:</span> <p class="price"><span class="amount"><?php echo $PretFaraTVA; ?>Euro + TVA</span></p>
    
    <span class="amount"> Total de Plata:</span> <p class="price"><span class="amount"><?php echo $PretEuro; ?> Euro (<?php echo $product->get_price_html(); ?>)</span></p><?php */?>
-	 
- <?php ModifinPret(); ?>  
+	
+    
+    
+     
+ <?php 
+ if (is_product() && has_term( 'swcat', 'product_cat' ) ) { ?>
+     	<span class="amount"> Pret:</span> <p class="price"><span class="amount"><?php echo $PretEuro; ?>Euro + TVA</span>
+ 
+ <?php
+ 		} else {
+ 
+ ModifinPret(); }
+ 
+ 
+ 
+ ?>  
     
 
 

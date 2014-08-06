@@ -60,12 +60,14 @@ if ( $main_layout != 'full-width' ) {
 
 <?php elseif ( $layout != 'full-width' ) : ?>
 
-  <aside class="<?php x_integrity_sidebar_class(); ?>" role="complementary">
+  <aside class="x-sidebar left" role="complementary">
     <?php if ( get_option( 'ups_sidebars' ) != array() ) : ?>
-      <?php dynamic_sidebar( apply_filters( 'ups_sidebar', 'sidebar-main' ) ); ?>
-    <?php else : ?>
-      <?php dynamic_sidebar( 'sidebar-main' ); ?>
+      
+      <?php dynamic_sidebar( 'main' ); ?>
+      
     <?php endif; ?>
   </aside>
 
+
 <?php endif; ?>
+

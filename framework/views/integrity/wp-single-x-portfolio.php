@@ -17,6 +17,7 @@
         <?php x_get_view( 'integrity', 'content', 'portfolio' ); ?>
         <?php x_get_view( 'integrity', '_comments-template' ); ?>
       <?php endwhile; ?>
+      
 
     </div> <!-- end .x-main.full -->
   </div> <!-- end .x-container-fluid.max.width.offset.cf -->

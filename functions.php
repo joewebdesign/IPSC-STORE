@@ -104,6 +104,7 @@ require_once( $func_path . '/icon.php' );
 require_once( $wdgt_path . '/dribbble.php' );
 require_once( $wdgt_path . '/flickr.php' );
 
+
 /////////////////// CHANGE PRICE
 
 //////////////////////////////////IA CURSUL VALUTAR BNR
@@ -346,20 +347,6 @@ function ModifinPret() {
  
 ////////////////////////////////////////////END PRICE SHOWING SYSTEM 
  
- 
-
-////////////////////////BEGIN ADD TEMPLATE TO SINGLE PRODUCT PAGE/////////////////////
-function add_sidebar_productpage() {
-    if ( is_singular('product') ) {
-        get_template ('Layout - Sidebar Left, Content Right');
-    }
-}
-add_action('template_redirect', 'add_sidebar_productpage');
-
-   
-////////////////////////BEGIN ADD TEMPLATE TO SINGLE PRODUCT PAGE/////////////////////
-
-
 
 ////////////////CHECKOUT PHONE FIELD NOT REQUIRED//////////////////////
 
@@ -374,6 +361,116 @@ return $address_fields;
 
 ////////////////CHECKOUT ZIP CODE/POSTAL CODE NOT REQUIRED//////////////////////
 ?>
+
+
+
+<?php
+////////////////BEGIN PLUGIN TO SHOW LIST OF TAGS IN SIDEBAR WIDGET//////////////////////
+
+add_action( 'widgets_init', array('Tag_List_Widget', 'register_widget') );
+ 
+class Tag_List_Widget extends WP_Widget {
+ 
+	/* Function that registers our widget. */
+	public static function register_widget() {
+		register_widget( 'Tag_List_Widget' );
+	}
+ 
+	public function __construct() {
+		/* Widget settings. */
+		$widget_ops = array( 'classname' => 'tags-list', 'description' => 'A widget that displays a list with the product tags.' );
+ 
+		/* Widget control settings. */
+		$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'tags-list-widget' );
+ 
+		/* Create the widget. */
+		parent::__construct( 'tags-list-widget', 'Product Tags List Widget', $widget_ops, $control_ops );
+	}
+ 
+	// Widget output
+	public function widget( $args, $instance ) {
+		global $post;
+		extract( $args );
+ 
+		/* User-selected settings. */
+		$title = apply_filters('widget_title', $instance['title'] );
+ 
+		/* Before widget (defined by themes). */
+		echo $before_widget;
+ 
+		if ( $title ) echo $before_title . $title . $after_title; ?>
+ 
+		<?php
+ 
+		$terms = get_terms( 'product_tag');
+ 
+		if ($terms) { ?>
+			
+			<? foreach ($terms as $term) { ?>
+				
+                <ul class="product-categories">
+                <a href="https://www.ipsc.ro/store/eticheta-produs/<?php echo $term->slug; ?>/">
+                <li class="cat-item"><?php echo $term->name; ?>
+                </li></a>                
+                </ul>
+			<?php } ?>
+			
+		<?php }
+ 
+		/* After widget (defined by themes). */
+		echo $after_widget;
+	}
+ 
+	public function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+ 
+		/* Strip tags (if needed) and update the widget settings. */
+		$instance['title'] = strip_tags( $new_instance['title'] );
+ 
+		return $instance;
+	}
+ 
+	// Widget in admin area
+	public function form( $instance ) {
+ 
+		/* Set up some default widget settings. */
+		$defaults = array( 'title' => 'Artists' );
+		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
+ 
+		<p>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>">Title:</label>
+			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:80%;" />
+		</p>
+ 
+		<?php
+	}
+}
+
+////////////////END PLUGIN TO SHOW LIST OF TAGS IN SIDEBAR WIDGET//////////////////////
+
+/*add_filter( 'wp_nav_menu', 'your_custom_menu_item', 10, 2 );
+function your_custom_menu_item ( $items, $args ) {
+    if (is_product() && has_term( 'swcat', 'product_cat' ) ) {
+	  'menu' == 'swarovski';
+	 
+        
+    }
+}*/
+
+add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 10, 2 );
+function your_custom_menu_item ( $items, $args ) {
+    if (is_single() && $args->theme_location == 'primary') {
+		if (has_term( 'swcat', 'product_cat' ))
+        $items = '<li  class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent "><a href="https://www.ipsc.ro/store/">HOME</a></li>
+		<li  class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent "><a href="https://www.ipsc.ro/store/">LINK1</a></li>';
+    }
+    return $items;
+}
+
+
+?>
+
+
 
 
 

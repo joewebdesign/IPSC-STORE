@@ -17,6 +17,16 @@ div.pp_pic_holder {
 	top:13em !important;
 	}
 
+/*Tag widget title to not show*/
+.h-widget {
+	display:none !important;
+	}
+
+/*SHOP TITLE to not show*/
+.x-header-landmark {
+display: none !important;
+}
+
 
 * {
   -webkit-box-sizing: border-box;
@@ -3657,7 +3667,7 @@ article.comment {
         background-color: white; }
       .widget ul li a,
       .widget ol li a {
-        border-bottom: 1px dotted;
+        /*border-bottom: 1px dotted;*/
         color: #7a7a7a; }
         .widget ul li a:hover,
         .widget ol li a:hover {
